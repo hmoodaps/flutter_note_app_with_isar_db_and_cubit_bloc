@@ -18,6 +18,7 @@ class CubitClass extends Cubit<AppState>{
    initDB() async {
     final path = await getApplicationDocumentsDirectory();
     isar = await Isar.open([NoteModelSchema], directory: path.path);
+    fetchNotes();
   }
 
 
